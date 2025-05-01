@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdStuPeFy – Soluții de marketing digital</title>
+    <!-- Tailwind CSS prin CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+<!-- Header -->
+<header class="bg-white shadow">
+    <div class="container mx-auto flex items-center justify-between p-6">
+        <h1 class="text-2xl font-bold">AdStuPeFy</h1>
+        <nav class="space-x-6">
+            <a href="#hero" class="hover:text-blue-600">Acasă</a>
+            <a href="#features" class="hover:text-blue-600">Funcționalități</a>
+            <a href="#pricing" class="hover:text-blue-600">Prețuri</a>
+            <a href="#contact" class="hover:text-blue-600">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero -->
+<section id="hero" class="relative bg-gray-100">
+    <img src="https://source.unsplash.com/1600x600/?marketing,digital" alt="Ilustrație marketing digital" class="w-full h-[400px] object-cover">
+    <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+        <div class="text-center text-white px-4">
+            <h2 class="text-4xl font-bold mb-4">Transformă-ți afacerea cu AdStuPeFy</h2>
+            <p class="mb-6">Campanii optimizate, analize detaliate și prețuri transparente.</p>
+            <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded">Solicită ofertă</a>
+        </div>
+    </div>
+</section>
+
+<!-- Funcționalități / Insights -->
+<section id="features" class="container mx-auto py-16 px-6">
+    <h3 class="text-3xl font-bold text-center mb-12">Ce oferim</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-lg shadow">
+            <div class="text-5xl mb-4">📊</div>
+            <h4 class="text-xl font-semibold mb-2">Analize detaliate</h4>
+            <p>Rapoarte în timp real și insight-uri care te ajută să iei decizii informate.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow">
+            <div class="text-5xl mb-4">🎯</div>
+            <h4 class="text-xl font-semibold mb-2">Targetare precisă</h4>
+            <p>Campanii adaptate publicului tău, pentru conversii maxime.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow">
+            <div class="text-5xl mb-4">⚙️</div>
+            <h4 class="text-xl font-semibold mb-2">Automatizare</h4>
+            <p>Procese automate pentru economisirea timpului și bugetului.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Prețuri -->
+<section id="pricing" class="bg-gray-50 py-16 px-6">
+    <div class="container mx-auto text-center mb-12">
+        <h3 class="text-3xl font-bold">Tarife transparente</h3>
+        <p class="mt-2 text-gray-600">Alege pachetul potrivit pentru afacerea ta</p>
+    </div>
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Basic -->
+        <div class="bg-white p-8 rounded-lg shadow hover:scale-[1.02] transition">
+            <h4 class="text-2xl font-semibold mb-4">Pachet Basic</h4>
+            <p class="text-4xl font-bold mb-6">€299<span class="text-base font-normal">/lună</span></p>
+            <ul class="mb-6 space-y-2 text-left">
+                <li>✅ Analize de bază</li>
+                <li>✅ 1 campanie activă</li>
+                <li>✅ Suport e-mail</li>
+            </ul>
+            <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-500 text-white py-3 px-6 rounded">Începe acum</a>
+        </div>
+        <!-- Pro -->
+        <div class="bg-white p-8 rounded-lg shadow hover:scale-[1.02] transition">
+            <h4 class="text-2xl font-semibold mb-4">Pachet Pro</h4>
+            <p class="text-4xl font-bold mb-6">€599<span class="text-base font-normal">/lună</span></p>
+            <ul class="mb-6 space-y-2 text-left">
+                <li>✅ Analize avansate</li>
+                <li>✅ Campanii multiple</li>
+                <li>✅ Suport telefon & chat</li>
+                <li>✅ Automatizări personalizate</li>
+            </ul>
+            <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-500 text-white py-3 px-6 rounded">Află mai multe</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="container mx-auto py-16 px-6">
+    <h3 class="text-3xl font-bold text-center mb-8">Contactează-ne</h3>
+    <form action="#" method="POST" class="max-w-xl mx-auto space-y-6">
+        <div>
+            <label for="name" class="block text-gray-700 mb-2">Nume complet</label>
+            <input type="text" id="name" name="name" required
+                   class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500" />
+        </div>
+        <div>
+            <label for="email" class="block text-gray-700 mb-2">Email</label>
+            <input type="email" id="email" name="email" required
+                   class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500" />
+        </div>
+        <div>
+            <label for="message" class="block text-gray-700 mb-2">Mesaj</label>
+            <textarea id="message" name="message" rows="5" required
+                      class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500"></textarea>
+        </div>
+        <div class="text-center">
+            <button type="submit"
+                    class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded">
+                Trimite mesaj
+            </button>
+        </div>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-400 py-6">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2025 AdStuPeFy. Toate drepturile rezervate.</p>
+        <p><a href="#" class="hover:text-white">Politica de confidențialitate</a> | <a href="#" class="hover:text-white">Termeni și condiții</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
