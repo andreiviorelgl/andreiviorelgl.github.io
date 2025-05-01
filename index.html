@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Adstupefy – Publicitate LED Dual-Side Brașov</title>
+    <title>Adstupefy – Publicitate LED Dual-Side Galati</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -186,30 +186,50 @@
     </p>
 </section>
 <!-- Contact -->
-<section id="contact" class="container mx-auto py-16 px-6">
-    <h3 class="text-3xl font-bold text-center mb-8">Contactează-ne</h3>
+<section id="contact" class="container mx-auto py-16 px-6" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold text-center mb-8">Contactează-ne</h2>
     <form
             action="https://formspree.io/f/mdkgaqod"
             method="POST"
+            class="max-w-lg mx-auto space-y-6"
     >
-        <label>
-            Your email:
-            <input type="email" name="email">
+        <label class="block">
+            <span class="text-gray-700 font-medium">Email</span>
+            <input
+                    type="email"
+                    name="email"
+                    required
+                    class="mt-1 block w-full rounded border-gray-300 shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-200 focus:ring-opacity-50 p-2"
+                    placeholder="exemplu@domeniu.ro"
+            />
         </label>
-        <label>
-            Your message:
-            <textarea name="message"></textarea>
+        <label class="block">
+            <span class="text-gray-700 font-medium">Mesaj</span>
+            <textarea
+                    name="message"
+                    rows="4"
+                    required
+                    class="mt-1 block w-full rounded border-gray-300 shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-200 focus:ring-opacity-50 p-2"
+                    placeholder="Cum te putem ajuta?"
+            ></textarea>
         </label>
-        <!-- your other form fields go here -->
-        <button type="submit">Send</button>
+        <button
+                type="submit"
+                class="w-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold py-3 rounded transition"
+        >
+            Trimite
+        </button>
     </form>
 </section>
 
 <!-- Footer -->
-<footer class="bg-gray-800 text-gray-400 py-6">
-    <div class="container mx-auto text-center">
-        <p>&copy; 2025 AdStuPeFy. Toate drepturile rezervate.</p>
-        <p><a href="#" class="hover:text-white">Politica de confidențialitate</a> | <a href="#" class="hover:text-white">Termeni și condiții</a></p>
+<footer class="bg-gray-900 text-gray-400 py-8">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 px-4">
+        <p class="text-sm">&copy; 2025 AdStuPeFy. Toate drepturile rezervate.</p>
+        <div class="flex space-x-4">
+            <a href="#" class="text-sm hover:text-white transition">Politica de confidențialitate</a>
+            <a href="#" class="text-sm hover:text-white transition">Termeni și condiții</a>
+        </div>
     </div>
 </footer>
 
