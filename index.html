@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Adstupefy – Publicitate LED Dual-Side Galati</title>
@@ -20,10 +20,30 @@
             --clr-text: #333;
             --ff-base: 'Inter', sans-serif;
         }
-        * { box-sizing: border-box; margin:0; padding:0; }
-        body { font-family: var(--ff-base); color: var(--clr-text); background: var(--clr-bg); line-height:1.6; }
-        a { color: inherit; text-decoration: none; }
-        .container { max-width: 850px; margin: 0 auto; padding: 0 1rem; }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--ff-base);
+            color: var(--clr-text);
+            background: var(--clr-bg);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
 
         /* ===== HERO ===== */
         .hero {
@@ -34,8 +54,20 @@
             min-height: 100vh;
             background: linear-gradient(135deg, #fafafa 0%, #e8e8e8 100%);
         }
-        .hero h1 { font-size: 2.75rem; font-weight:800; margin-bottom: 0.5rem; color: var(--clr-primary); }
-        .hero p { font-size: 1.125rem; margin-bottom: 1.5rem; color: var(--clr-text); }
+
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--clr-primary);
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            color: var(--clr-text);
+        }
+
         .btn {
             display: inline-block;
             background: var(--clr-accent);
@@ -44,12 +76,16 @@
             border-radius: 4px;
             transition: transform .2s;
         }
-        .btn:hover { transform: scale(1.05); }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
 
         /* ===== SECTIUNI ===== */
         section {
             padding: 4rem 0;
         }
+
         section h2 {
             font-size: 1.875rem;
             font-weight: 600;
@@ -57,14 +93,19 @@
             text-align: center;
             position: relative;
         }
+
         section h2::after {
             content: '';
-            width: 60px; height: 4px;
+            width: 60px;
+            height: 4px;
             background: var(--clr-accent);
             display: block;
             margin: 0.5rem auto 2rem;
         }
-        .oferta p { margin-bottom: 1rem; }
+
+        .oferta p {
+            margin-bottom: 1rem;
+        }
 
         /* ===== TABEL PRETURI ===== */
         .price-table {
@@ -74,17 +115,24 @@
             font-size: 0.95rem;
             overflow-x: auto;
         }
+
         .price-table th,
         .price-table td {
             border: 1px solid #ddd;
             padding: 0.75rem 0.5rem;
             text-align: center;
         }
+
         .price-table th {
             background: #f0f0f0;
             font-weight: 600;
         }
-        .price-table thead th { position: sticky; top: 0; }
+
+        .price-table thead th {
+            position: sticky;
+            top: 0;
+        }
+
         .note {
             font-size: 0.9rem;
             color: #555;
@@ -92,99 +140,286 @@
             margin-top: 1rem;
         }
 
+        /* wrapper pentru fiecare FAQ */
+        .faq-item .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item[open] .faq-content {
+            max-height: 500px; /* sau mai mult, în funcție de cât text ai */
+        }
+
         /* ===== RESPONSIV ===== */
-        @media (max-width:600px) {
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1rem; }
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 
 <body>
-<!-- HERO -->
-<header class="hero" id="hero" data-aos="fade-up">
-    <div class="container">
-        <h1>Publicitate LED Dual-Side în Brașov – Sânpetru</h1>
-        <p>Atrage atenția traficului intensiv și crește-ți vizibilitatea brandului</p>
-        <a href="#oferta" class="btn">Află mai multe</a>
+<header
+        id="hero"
+        class="relative flex flex-col md:flex-row md:h-screen"
+        data-aos="fade-up"
+>
+    <!-- SMALL LOGO BAR -->
+    <div class="absolute w-full bg-white py-2 shadow-sm z-20">
+        <div class="container mx-auto flex justify-center">
+            <a href="/" aria-label="AdStuPeFy – pagina principală">
+                <img src="logo_adstupefy.png" alt="AdStuPeFy Logo" class="h-12 md:h-10 w-auto" />
+            </a>
+        </div>
+    </div>
+
+    <!-- IMAGE HALF -->
+    <div class="relative w-full md:w-1/2 h-64 md:h-full">
+        <!-- imagine fundal -->
+        <div
+                class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('hero_adstupefy.png');"
+        ></div>
+        <!-- overlay întunecat pentru contrast -->
+        <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+
+    <!-- TEXT HALF -->
+    <div
+            class="w-full md:w-1/2 flex items-center justify-center p-6 text-center bg-[#eeebeb]"
+    >
+        <div class="relative z-10 space-y-4">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold text-gray-900">
+                Publicitate LED Dual-Side în Galați – Vânători
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700">
+                Atrage atenția traficului și crește-ți vizibilitatea brandului
+            </p>
+            <a
+                    href="#oferta"
+                    class="inline-block bg-yellow-400 text-black font-semibold px-8 py-3 rounded-lg hover:bg-yellow-300 transition"
+            >
+                Află mai multe
+            </a>
+        </div>
     </div>
 </header>
 
-<!-- CE OFERIM -->
-<section id="oferta" class="oferta container" data-aos="fade-up">
-    <h2>Ce oferim</h2>
-    <p><strong>Locație:</strong> Brașov – Sânpetru, ieșirea din Brașov către Sânpetru (Bd. 13 Decembrie → Str. Zaharia Bârsan), la aprox. 1,5 km de Coresi Shopping Resort.</p>
-    <p><strong>Pozitionare:</strong> Ecran LED dual-side de 18 MP amplasat pe drumul de acces principal între Brașov și Sânpetru, cu expunere 100% trafic din Sânpetru și Bod și ~30% trafic către Hărman.</p>
-    <p>Instalat în incinta spălătoriei First Top Shine – una dintre cele mai moderne spălătorii automate din oraș, cu un trafic lunar mediu de 10.000 autoturisme.</p>
+<!-- Tailwind + custom CSS -->
+<style>
+    @keyframes marquee {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .marquee {
+        animation: marquee 10s linear infinite;
+    }
+</style>
+
+<div class="overflow-hidden bg-yellow-400 text-black p-4">
+    <!-- The inner track is twice as long so it can loop seamlessly -->
+    <div class="marquee whitespace-nowrap">
+        <span class="inline-block mx-8 font-semibold">Atrage noi clienți</span>
+        <span class="inline-block mx-8 font-semibold">Stimulează vânzările</span>
+        <span class="inline-block mx-8 font-semibold">Deschide noi oportunități</span>
+        <span class="inline-block mx-8 font-semibold">Maximizează vizibilitatea brandului</span>
+        <span class="inline-block mx-8 font-semibold">Extinde-ți audiența pe social media</span>
+        <span class="inline-block mx-8 font-semibold">Creează parteneriate de succes</span>
+
+        <!-- repeat for seamless loop -->
+        <span class="inline-block mx-8 font-semibold">Atrage noi clienți</span>
+        <span class="inline-block mx-8 font-semibold">Stimulează vânzările</span>
+        <span class="inline-block mx-8 font-semibold">Deschide noi oportunități</span>
+        <span class="inline-block mx-8 font-semibold">Maximizează vizibilitatea brandului</span>
+        <span class="inline-block mx-8 font-semibold">Extinde-ți audiența pe social media</span>
+        <span class="inline-block mx-8 font-semibold">Creează parteneriate de succes</span>
+    </div>
+</div>
+
+
+<!-- CE OFERIM (revizuit) -->
+<section
+        id="oferta"
+        class="py-16 bg-white"
+        data-aos="fade-up"
+>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
+            Ce oferim
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card Locație -->
+            <div class="flex flex-col items-start p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
+                <!-- Iconă locație -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3z
+               M12 21c-4.97 0-9-4.03-9-9a9 9 0 1118 0c0 4.97-4.03 9-9 9z" />
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Locație</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Galați – Vânători. Ieșirea din Galați către Vânători (DN26 → Str. Energiei, nr. 2), lângă METRO și spălătoria ACG Selfpoint.
+                </p>
+            </div>
+
+            <!-- Card Poziționare -->
+            <div class="flex flex-col items-start p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
+                <!-- Iconă hartă -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 20l-5.447-2.724A2 2 0 013 15.382V5a2 2 0 011.105-1.789l6-3a2 2 0 011.789 0l6 3A2 2 0 0121 5v10.382a2 2 0 01-1.105 1.789L15 20m-6 0v-8m6 8v-5" />
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Poziționare</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Ecran LED dual-side de 18 MP pe drumul principal între Galați și Vânători, cu expunere 100 % trafic local și județean.
+                </p>
+            </div>
+
+            <!-- Card Installare -->
+            <div class="flex flex-col items-start p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
+                <!-- Iconă clădire -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 21v-8a4 4 0 014-4h10a4 4 0 014 4v8
+               M3 10l9-5 9 5M4 6h16" />
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Instalare</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Amplasat în incinta spălătoriei <strong>ACG Selfpoint</strong> – una dintre cele mai moderne spălătorii automate din oraș.
+                </p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- PREȚURI -->
-<section id="preturi" class="container" data-aos="fade-up">
-    <h2>Rate Card</h2>
 
-    <h3>1 afișare la <span style="color:var(--clr-accent)">3 minute</span> / spot</h3>
-    <table class="price-table">
-        <thead>
-        <tr>
-            <th>Durata spot</th>
-            <th>Nr. apariții / zi</th>
-            <th>Nr. apariții / lună</th>
-            <th>Preț / lună / ecran</th>
-            <th>Preț / lună x 2 ecrane</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>10 sec</td>
-            <td>380</td>
-            <td>11 400</td>
-            <td>500 €</td>
-            <td>800 €</td>
-        </tr>
-        <tr>
-            <td>15 sec</td>
-            <td>380</td>
-            <td>11 400</td>
-            <td>680 €</td>
-            <td>1 100 €</td>
-        </tr>
-        </tbody>
-    </table>
+<!-- PACHETE DISPONIBILE -->
+<section
+        id="pachete"
+        class="py-16 bg-gray-50"
+        data-aos="fade-up"
+>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
+            Pachete disponibile
+        </h2>
 
-    <h3>1 afișare la <span style="color:var(--clr-accent)">6 minute</span> / spot</h3>
-    <table class="price-table">
-        <thead>
-        <tr>
-            <th>Durata spot</th>
-            <th>Nr. apariții / zi</th>
-            <th>Nr. apariții / lună</th>
-            <th>Preț / lună / ecran</th>
-            <th>Preț / lună x 2 ecrane</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>10 sec</td>
-            <td>190</td>
-            <td>5 700</td>
-            <td>400 €</td>
-            <td>600 €</td>
-        </tr>
-        <tr>
-            <td>15 sec</td>
-            <td>190</td>
-            <td>5 700</td>
-            <td>520 €</td>
-            <td>850 €</td>
-        </tr>
-        </tbody>
-    </table>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Card 3 minute -->
+            <div
+                    class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 flex flex-col"
+            >
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                    La fiecare <span class="text-yellow-400">3 minute</span>
+                </h3>
+                <ul class="space-y-2 text-gray-700 flex-1">
+                    <li><span class="font-bold">Maxim 380 afișări/zi</span></li>
+                    <li><span class="font-bold">≈ 11 400 afișări/lună</span></li>
+                </ul>
+                <a
+                        href="#contact"
+                        class="mt-6 inline-block bg-yellow-400 text-gray-900 font-semibold text-center py-3 rounded-lg hover:bg-yellow-300 transition"
+                >
+                    Solicită detalii
+                </a>
+            </div>
 
-    <p class="note">
-        Perioada de funcționare: 05:00 – 24:00<br>
-        Prețurile nu includ TVA și taxa locală de publicitate de 3%.
-    </p>
+            <!-- Card 6 minute -->
+            <div
+                    class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 flex flex-col"
+            >
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                    La fiecare <span class="text-yellow-400">6 minute</span>
+                </h3>
+                <ul class="space-y-2 text-gray-700 flex-1">
+                    <li><span class="font-bold">Maxim 190 afișări/zi</span></li>
+                    <li><span class="font-bold">≈ 5 700 afișări/lună</span></li>
+                </ul>
+                <a
+                        href="#contact"
+                        class="mt-6 inline-block bg-yellow-400 text-gray-900 font-semibold text-center py-3 rounded-lg hover:bg-yellow-300 transition"
+                >
+                    Solicită detalii
+                </a>
+            </div>
+        </div>
+
+        <p class="text-center text-sm text-gray-600 mt-12">
+            Pentru campanii de minimum <span class="font-semibold">6 luni</span> oferim un <span class="font-semibold">discount de 10 %</span>.
+        </p>
+    </div>
 </section>
+
+
+<!-- ÎNTREBĂRI FRECVENTE -->
+<section
+        id="faq"
+        class="py-16 bg-white"
+        data-aos="fade-up"
+>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-8">
+            Întrebări frecvente
+        </h2>
+        <div class="space-y-4">
+            <!-- FAQ item -->
+            <details class="faq-item p-4 border rounded-lg">
+                <summary class="font-semibold cursor-pointer">
+                    Tipuri de reclame acceptate: Se pot afișa atât videoclipuri, cât și imagini statice? Dacă da, există
+                    specificații tehnice?
+                </summary>
+                <div class="faq-content mt-2 text-gray-700">
+                    Da, se pot afișa ambele variante de spoturi. De asemenea, se poate schimba spotul publicitar de câte
+                    ori doriți fără cost suplimentar.
+                    Specificații tehnice: <strong>1008 × 504 px</strong>. Durata spotului: <strong>10 sau 15
+                    secunde</strong>
+                </div>
+            </details>
+
+            <details class="faq-item p-4 border rounded-lg">
+                <summary class="font-semibold cursor-pointer">
+                    Estimare trafic: Puteți oferi o estimare a numărului de persoane/mașini care vizualizează monitorul
+                    zilnic sau săptămânal?
+                </summary>
+                <div class="faq-content mt-2 text-gray-700">
+                    Trafic mediu lunar de aproximativ <strong>50 000 autoturisme</strong>.
+                </div>
+            </details>
+
+            <details class="faq-item p-4 border rounded-lg">
+                <summary class="font-semibold cursor-pointer">
+                    Prețuri: Care sunt tarifele pentru afișarea reclamelor? Există pachete pe perioade mai lungi (ex. o
+                    lună)?
+                </summary>
+                <div class="faq-content mt-2 text-gray-700">
+                    <a
+                            href="#contact"
+                            aria-label="Deschide formularul de contact"><strong>Interesat de prețuri? Trimite-ne un mesaj și îți trimitem direct rate card-ul complet!</strong></a>. Da, oferim pachete cu durate începând de la o lună. Pentru o
+                    campanie mai lungă de <strong>6 luni</strong>, aplicăm un
+                    <strong>discount de 10 %</strong>.
+                </div>
+            </details>
+
+            <details class="faq-item p-4 border rounded-lg">
+                <summary class="font-semibold cursor-pointer">
+                    Alte detalii: Există anumite condiții sau cerințe speciale pe care ar trebui să le cunosc?
+                </summary>
+                <div class="faq-content mt-2 text-gray-700">
+                    Recomandăm o campanie de minim <strong>6 luni</strong> pentru o vizibilitate sporită.
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+
 <!-- Contact -->
 <section id="contact" class="container mx-auto py-16 px-6" data-aos="fade-up">
     <h2 class="text-3xl font-semibold text-center mb-8">Contactează-ne</h2>
@@ -194,15 +429,20 @@
             class="max-w-lg mx-auto space-y-6"
     >
         <label class="block">
-            <span class="text-gray-700 font-medium">Email</span>
+            <span class="text-gray-700 font-medium">Email sau telefon</span>
             <input
-                    type="email"
-                    name="email"
+                    type="text"
+                    name="contact"
                     required
-                    class="mt-1 block w-full rounded border-gray-300 shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-200 focus:ring-opacity-50 p-2"
-                    placeholder="exemplu@domeniu.ro"
+                    placeholder="exemplu@domeniu.ro sau +40712345678"
+                    pattern="(^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$)|(^\+?\d{7,15}$)"
+                    title="Introduceți o adresă de email validă sau un număr de telefon (7–15 cifre)."
+                    class="mt-1 block w-full rounded border-gray-300 shadow-sm
+           focus:border-yellow-400 focus:ring focus:ring-yellow-200
+           focus:ring-opacity-50 p-2"
             />
         </label>
+
         <label class="block">
             <span class="text-gray-700 font-medium">Mesaj</span>
             <textarea
@@ -225,14 +465,25 @@
 <!-- Footer -->
 <footer class="bg-gray-900 text-gray-400 py-8">
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 px-4">
-        <p class="text-sm">&copy; 2025 AdStuPeFy. Toate drepturile rezervate.</p>
+        <p class="text-sm">&copy; 2025 Adstupefy. Toate drepturile rezervate.</p>
         <div class="flex space-x-4">
-            <a href="#" class="text-sm hover:text-white transition">Politica de confidențialitate</a>
-            <a href="#" class="text-sm hover:text-white transition">Termeni și condiții</a>
+            <a href="/confidentialitate/" class="text-sm hover:text-white transition">Politica de confidențialitate</a>
+            <a href="/termeni/" class="text-sm hover:text-white transition">Termeni și condiții</a>
         </div>
     </div>
 </footer>
-
+<!-- Floating Chat Button -->
+<a
+        href="#contact"
+        aria-label="Deschide formularul de contact"
+        class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[var(--clr-accent)] text-white rounded-full shadow-lg hover:scale-110 transition-transform"
+>
+    <!-- Iconiță chat (poți înlocui cu orice SVG preferi) -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.91L3 20l1.03-4.305A7.967 7.967 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+    </svg>
+</a>
 <!-- AOS Animation JS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
