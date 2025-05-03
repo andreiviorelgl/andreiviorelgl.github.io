@@ -11,7 +11,35 @@
 
     <!-- AOS Animation CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-
+    <!-- ...alte meta, titlu etc. -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'EAAlNvzZAFHqABO78jLuLiYl4vZBzuJKnp6wAeuYiC5JepKQDvRQk8UZC6bAB9ZBXhGZCtDZC3ZAhF53kXtEbgmUfcGiiwO9AqKDOge6P2jV9PiJsqt6zrOf7eylN4arggZCht1gUUleCW4ieMB83HHLwNrZC18FvZB7JfSibMsRep1MGg7dSXxZA8TNcCnwAA7JjwZDZD');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1"
+             src="https://www.facebook.com/tr?id=EAAlNvzZAFHqABO78jLuLiYl4vZBzuJKnp6wAeuYiC5JepKQDvRQk8UZC6bAB9ZBXhGZCtDZC3ZAhF53kXtEbgmUfcGiiwO9AqKDOge6P2jV9PiJsqt6zrOf7eylN4arggZCht1gUUleCW4ieMB83HHLwNrZC18FvZB7JfSibMsRep1MGg7dSXxZA8TNcCnwAA7JjwZDZD&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
     <style>
         :root {
             --clr-primary: #111;
@@ -174,7 +202,7 @@
     <div class="absolute w-full bg-white py-2 shadow-sm z-20">
         <div class="container mx-auto flex justify-center">
             <a href="/" aria-label="AdStuPeFy – pagina principală">
-                <img src="logo_adstupefy.png" alt="AdStuPeFy Logo" class="h-12 md:h-10 w-auto" />
+                <img src="logo_adstupefy.png" alt="AdStuPeFy Logo" class="h-12 md:h-10 w-auto"/>
             </a>
         </div>
     </div>
@@ -214,9 +242,14 @@
 <!-- Tailwind + custom CSS -->
 <style>
     @keyframes marquee {
-        0%   { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
     }
+
     .marquee {
         animation: marquee 10s linear infinite;
     }
@@ -258,41 +291,47 @@
             <!-- Card Locație -->
             <div class="flex flex-col items-start p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
                 <!-- Iconă locație -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-400 mb-4" fill="none"
+                     viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3z
-               M12 21c-4.97 0-9-4.03-9-9a9 9 0 1118 0c0 4.97-4.03 9-9 9z" />
+               M12 21c-4.97 0-9-4.03-9-9a9 9 0 1118 0c0 4.97-4.03 9-9 9z"/>
                 </svg>
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Locație</h3>
                 <p class="text-gray-700 leading-relaxed">
-                    Galați – Vânători. Ieșirea din Galați către Vânători (DN26 → Str. Energiei, nr. 2), lângă METRO și spălătoria ACG Selfpoint.
+                    Galați – Vânători. Ieșirea din Galați către Vânători (DN26 → Str. Energiei, nr. 2), lângă METRO și
+                    spălătoria ACG Selfpoint.
                 </p>
             </div>
 
             <!-- Card Poziționare -->
             <div class="flex flex-col items-start p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
                 <!-- Iconă hartă -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-400 mb-4" fill="none"
+                     viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M9 20l-5.447-2.724A2 2 0 013 15.382V5a2 2 0 011.105-1.789l6-3a2 2 0 011.789 0l6 3A2 2 0 0121 5v10.382a2 2 0 01-1.105 1.789L15 20m-6 0v-8m6 8v-5" />
+                          d="M9 20l-5.447-2.724A2 2 0 013 15.382V5a2 2 0 011.105-1.789l6-3a2 2 0 011.789 0l6 3A2 2 0 0121 5v10.382a2 2 0 01-1.105 1.789L15 20m-6 0v-8m6 8v-5"/>
                 </svg>
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Poziționare</h3>
                 <p class="text-gray-700 leading-relaxed">
-                    Ecran LED dual-side de 18 MP pe drumul principal între Galați și Vânători, cu expunere 100 % trafic local și județean.
+                    Ecran LED dual-side de 18 MP pe drumul principal între Galați și Vânători, cu expunere 100 % trafic
+                    local și județean.
                 </p>
             </div>
 
             <!-- Card Installare -->
             <div class="flex flex-col items-start p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
                 <!-- Iconă clădire -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-400 mb-4" fill="none"
+                     viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M3 21v-8a4 4 0 014-4h10a4 4 0 014 4v8
-               M3 10l9-5 9 5M4 6h16" />
+               M3 10l9-5 9 5M4 6h16"/>
                 </svg>
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Instalare</h3>
                 <p class="text-gray-700 leading-relaxed">
-                    Amplasat în incinta spălătoriei <strong>ACG Selfpoint</strong> – una dintre cele mai moderne spălătorii automate din oraș.
+                    Amplasat în incinta spălătoriei <strong>ACG Selfpoint</strong> – una dintre cele mai moderne
+                    spălătorii automate din oraș.
                 </p>
             </div>
         </div>
@@ -401,7 +440,9 @@
                 <div class="faq-content mt-2 text-gray-700">
                     <a
                             href="#contact"
-                            aria-label="Deschide formularul de contact"><strong>Interesat de prețuri? Trimite-ne un mesaj și îți trimitem direct rate card-ul complet!</strong></a>. Da, oferim pachete cu durate începând de la o lună. Pentru o
+                            aria-label="Deschide formularul de contact"><strong>Interesat de prețuri? Trimite-ne un
+                        mesaj și îți trimitem direct rate card-ul complet!</strong></a>. Da, oferim pachete cu durate
+                    începând de la o lună. Pentru o
                     campanie mai lungă de <strong>6 luni</strong>, aplicăm un
                     <strong>discount de 10 %</strong>.
                 </div>
@@ -423,7 +464,7 @@
 <!-- Contact -->
 <section id="contact" class="container mx-auto py-16 px-6" data-aos="fade-up">
     <h2 class="text-3xl font-semibold text-center mb-8">Contactează-ne</h2>
-    <form
+    <form id="contact-form"
             action="https://formspree.io/f/mdkgaqod"
             method="POST"
             class="max-w-lg mx-auto space-y-6"
@@ -487,6 +528,11 @@
 <!-- AOS Animation JS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
+
+    document.getElementById('contact-form').addEventListener('submit', function () {
+        fbq('track', 'Lead');
+    });
+
     AOS.init({
         once: true,
         duration: 600
